@@ -275,6 +275,12 @@ $(".list-group").on("change", "input[type='text']", function() {
   auditTask($(taskSpan).closest(".list-group-item"));
 });
 
+setInterval(function() {
+  $(".card .list-group-item").each(function (el) {
+    auditTask(el);
+  });
+}, 1800000);
+
 // load tasks for the first time
 loadTasks();
 
